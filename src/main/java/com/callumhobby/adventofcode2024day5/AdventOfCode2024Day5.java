@@ -11,6 +11,11 @@ package com.callumhobby.adventofcode2024day5;
 public class AdventOfCode2024Day5 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        InputReader rules = new InputReader("src\\main\\java\\com\\callumhobby\\adventofcode2024day5\\Rules.txt");
+        InputReader queues = new InputReader("src\\main\\java\\com\\callumhobby\\adventofcode2024day5\\Input.txt");
+        
+        PrintQueue queue = new PrintQueue(rules.getLines(),queues.getLines());
+        
+        System.out.println("Sum of middle page numbers: "+String.valueOf(queue.middleSum()));
     }
 }
