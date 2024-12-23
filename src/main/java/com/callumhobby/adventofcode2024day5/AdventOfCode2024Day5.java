@@ -16,6 +16,7 @@ public class AdventOfCode2024Day5 {
         
         PrintQueue queue = new PrintQueue(rules.getLines(),queues.getLines());
         
-        System.out.println("Sum of middle page numbers: "+String.valueOf(queue.middleSum()));
+        System.out.println("Sum of middle page numbers for valid queues: "+String.valueOf(queue.middleSum(queue.validQueues)));
+        System.out.println("Sum of middle page numbers for fixed queues: "+String.valueOf(queue.middleSum(queue.fixedQueues)));
     }
 }
